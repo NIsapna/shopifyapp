@@ -5,4 +5,5 @@ export { BlogEditForm } from "./BlogEditForm";
 export { BlogHeader } from "./BlogHeader";
 export { LoadingState } from "./LoadingState";
 export { SeoScoreDisplay } from "./SeoScoreDisplay";
+export { SeoItemWithPoints } from "./SeoItemWithPoints";
 

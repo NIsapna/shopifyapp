@@ -3,7 +3,7 @@ import DummyBlogScreen from "../ui-components/dummy-blog/Index";
 
 const DummyBlog = () => {
     return (
-        <Page title="Dummy Blog Optimization Demo">
+        <Page>
             <DummyBlogScreen />
         </Page>
     );

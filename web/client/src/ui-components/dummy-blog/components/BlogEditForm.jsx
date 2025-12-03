@@ -40,7 +40,14 @@ export const BlogEditForm = ({ formState, onImageError }) => {
   return (
     <Card>
       <Box padding="400">
-        <BlockStack gap="500">
+        <Box
+          style={{
+            maxHeight: "calc(100vh - 250px)",
+            overflowY: "auto",
+            paddingRight: "8px",
+          }}
+        >
+          <BlockStack gap="500">
           {/* Title */}
           <TextField
             label="Blog Title"
@@ -118,7 +125,8 @@ export const BlogEditForm = ({ formState, onImageError }) => {
               modules={RICH_TEXT_MODULES}
             />
           </div>
-        </BlockStack>
+          </BlockStack>
+        </Box>
       </Box>
     </Card>
   );

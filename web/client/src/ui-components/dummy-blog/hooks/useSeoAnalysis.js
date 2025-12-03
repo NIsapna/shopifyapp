@@ -39,7 +39,15 @@ export const useSeoAnalysis = (blogData) => {
     return checks;
   }, []);
 
-  // Get analysis for each check item
+  // Calculate points per check item
+  // Each check contributes equally to the total score of 100
+  // So each check is worth 100 / totalChecks points
+  const pointsPerCheck = useMemo(() => {
+    if (!extendedSeoChecks.length) return 0;
+    return 100 / extendedSeoChecks.length;
+  }, [extendedSeoChecks.length]);
+
+  // Get analysis for each check item with points
   const checkAnalyses = useMemo(() => {
     if (!blogData) return [];
 
@@ -60,13 +68,26 @@ export const useSeoAnalysis = (blogData) => {
         ? { status: analysisData.status, message: analysisData.message }
         : analysis;
 
+      // Calculate points earned for this check
+      // Based on calculateSeoScore: good = 1, warning = 0.5, missing = 0
+      // Points are calculated as: (statusWeight / totalChecks) * 100
+      let pointsEarned = 0;
+      const maxPoints = pointsPerCheck;
+      if (finalAnalysis.status === "good") {
+        pointsEarned = maxPoints;
+      } else if (finalAnalysis.status === "warning") {
+        pointsEarned = maxPoints * 0.5;
+      }
+
       return {
         ...item,
         value,
         analysis: finalAnalysis,
+        pointsEarned,
+        maxPoints,
       };
     });
-  }, [extendedSeoChecks, seoAnalyses, blogData]);
+  }, [extendedSeoChecks, seoAnalyses, blogData, pointsPerCheck]);
 
   return {
     overallScore,

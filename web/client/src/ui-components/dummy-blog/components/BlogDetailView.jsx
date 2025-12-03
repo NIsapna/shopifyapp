@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, InlineGrid, BlockStack, Card, Text, InlineStack } from "@shopify/polaris";
 import SeoScoreCard from "../../seo-panel/SeoScoreCard";
-import SeoItem from "../../seo-panel/SeoItem";
+import { SeoItemWithPoints } from "./SeoItemWithPoints";
 
 
 export const BlogDetailView = ({ seoData }) => {
@@ -30,25 +30,27 @@ export const BlogDetailView = ({ seoData }) => {
         {/* Right column: SEO Checklist */}
         <Box>
           <Card>
-            <Box padding="400">
+            <Box padding="100">
               <BlockStack gap={200}>
                 <InlineStack align="space-between">
                   <Text variant="headingMd">SEO Checklist</Text>
                 </InlineStack>
 
-                <Box padding="--p-space-300" />
+                <Box padding="--p-space-200" />
 
-                <BlockStack gap={200}>
-                  {checkAnalyses.map((item) => (
-                    <SeoItem
-                      key={item.id}
-                      item={item}
-                      onEdit={() => {}} // No-op for read-only
-                      onFix={() => {}} // No-op for read-only
-                      onFixLinks={null} // No-op for read-only
-                    />
-                  ))}
-                </BlockStack>
+                <Box
+                  style={{
+                    maxHeight: "calc(100vh - 280px)",
+                    overflowY: "auto",
+                    paddingRight: "8px",
+                  }}
+                >
+                  <BlockStack gap={200}>
+                    {checkAnalyses.map((item) => (
+                      <SeoItemWithPoints key={item.id} item={item} />
+                    ))}
+                  </BlockStack>
+                </Box>
               </BlockStack>
             </Box>
           </Card>
