@@ -1,0 +1,26 @@
+name = "SEOJog"
+client_id = "6813e4f7aa2b15984a046b51e671f86d"
+application_url = "https://app.seojog.app"
+embedded = true
+handle = "seojog"
+[access_scopes]
+scopes = "read_content,write_content"
+[access.admin]
+direct_api_mode = "online"
+[auth]
+redirect_urls = [
+  "https://app.seojog.app/api/shopify/redirect",
+  "https://app.seojog.app/shopify/redirect",
+  "https://app.seojog.app/auth/callback",
+  "https://app.seojog.app/api/auth/callback"
+]
+[webhooks]
+api_version = "2025-10"
+[[webhooks.subscriptions]]
+topics = [ "app/uninstalled" ]
+compliance_topics = [ "customers/redact", "customers/data_request", "shop/redact" ]
+uri = "/api/webhooks"
+[pos]
+embedded = false
+[build]
+automatically_update_urls_on_dev = false

@@ -1,0 +1,39 @@
+/* RichTextEditor.css */
+
+.PolarisRichEditor .ql-container {
+  border: 1px solid #c9cccf; /* same as Polaris border color */
+  border-radius:0 0 8px 8px ;
+  background-color: #ffffff;
+  min-height: 180px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  color: #202223;
+  transition: border-color 0.2s ease;
+  box-shadow: 0 0 0 1px transparent;
+}
+
+.PolarisRichEditor .ql-container:hover {
+  border-color: #aeb4b9;
+}
+
+.PolarisRichEditor .ql-container.ql-focused {
+  border-color: #006fbb; /* Polaris primary blue */
+  box-shadow: 0 0 0 1px #006fbb;
+}
+
+.PolarisRichEditor .ql-toolbar {
+  border: 1px solid #c9cccf;
+  border-radius: 8px 8px 0 0;
+  background-color: #f6f6f7;
+}
+
+.PolarisRichEditor .ql-editor {
+  padding: 12px 14px;
+  min-height: 150px;
+}
+
+.PolarisRichEditor .ql-editor.ql-blank::before {
+  color: #8c9196;
+  font-style: normal;
+  left: 14px;
+}

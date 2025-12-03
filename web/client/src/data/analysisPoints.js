@@ -1,0 +1,15 @@
+export const analysisPoints = [
+  "H1 Tags",
+  "H2 Tags",
+  "H3 Tags",
+  "Content Quality & Readability",
+  "Content Structure",
+  "Backlinks / Internal links",
+  "Image alt tags",
+  "Meta description / title",
+  "Image Keyword Research & Intent",
+  "Image Optimization",
+  "Page Speed",
+  "Duplicate Content",
+  "Content Length",
+];

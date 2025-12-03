@@ -1,0 +1,50 @@
+{
+  "name": "shopify-app-template-node",
+  "version": "1.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "debug": "node --inspect-brk index.js",
+    "dev": "cross-env NODE_ENV=development nodemon index.js --ignore ./frontend --ignore ./client",
+    "serve": "cross-env NODE_ENV=production node index.js",
+    "test": "cross-env NODE_ENV=test node --test \"./tests/**/*.test.js\""
+  },
+  "type": "module",
+ "engines": {
+    "node": ">=22.12.0"
+  },
+  "dependencies": {
+    "@shopify/shopify-api": "^11.14.1",
+    "@shopify/shopify-app-express": "^5.0.16",
+    "@shopify/shopify-app-session-storage-mongodb": "^4.0.16",
+    "@shopify/shopify-app-session-storage-sqlite": "^4.0.16",
+    "axios": "^1.8.4",
+    "bcrypt": "^5.1.1",
+    "compression": "^1.7.4",
+    "connect-mongo": "^5.1.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.6.1",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "firebase-admin": "^13.3.0",
+    "jsdom": "^26.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.13.1",
+    "multer": "^1.4.5-lts.2",
+    "node-cron": "^4.2.1",
+    "nodemailer": "^6.10.1",
+    "serve-static": "^1.14.1",
+    "session": "^0.1.0",
+    "shopify-api-node": "^3.15.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "prettier": "^2.6.2",
+    "pretty-quick": "^3.1.3"
+  }
+}
