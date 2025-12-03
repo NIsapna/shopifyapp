@@ -201,11 +201,12 @@ export default function App() {
                     <div style={{ padding: '16px', backgroundColor: '#f6f6f7', borderBottom: '1px solid #e1e3e5' }}>
                       <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
                         <Link to="/" style={{ textDecoration: 'none', color: '#008060' }}>Home</Link>
-                        <Link to="/manage-authors" style={{ textDecoration: 'none', color: '#008060' }}>Manage Authors</Link>
-                        <Link to="/assign-authors" style={{ textDecoration: 'none', color: '#008060' }}>Assign Authors</Link>
-                        <Link to="/blog-optimization" style={{ textDecoration: 'none', color: '#008060' }}>Blog Optimization</Link>
-                        <Link to="/pricing" style={{ textDecoration: 'none', color: '#008060' }}>Pricing</Link>
-                        <Link to="/support" style={{ textDecoration: 'none', color: '#008060' }}>Support</Link>
+                        {/* <Link to="/manage-authors" style={{ textDecoration: 'none', color: '#008060' }}>Manage Authors</Link> */}
+                        {/* <Link to="/assign-authors" style={{ textDecoration: 'none', color: '#008060' }}>Assign Authors</Link> */}
+                        {/* <Link to="/blog-optimization" style={{ textDecoration: 'none', color: '#008060' }}>Blog Optimization</Link> */}
+                        <Link to="/dummy-blog" style={{ textDecoration: 'none', color: '#008060' }}>Dummy Blog Demo</Link>
+                        {/* <Link to="/pricing" style={{ textDecoration: 'none', color: '#008060' }}>Pricing</Link> */}
+                        {/* <Link to="/support" style={{ textDecoration: 'none', color: '#008060' }}>Support</Link> */}
                       </div>
                     </div>
                   ) : (
@@ -214,6 +215,7 @@ export default function App() {
                       <a href="/manage-authors">Manage Authors</a>
                       <a href="/assign-authors">Assign Authors to Blogs</a>
                       <a href="/blog-optimization">Blog Optimization</a>
+                      <a href="/dummy-blog">Dummy Blog Demo</a>
                       {/* <a href="/article-details">Article Details</a> */}
                       <a href="/pricing">Pricing</a>
                       {/* <a href="/blog-post">Blog Post</a> */}
